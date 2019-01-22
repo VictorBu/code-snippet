@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>web 版离线地图测试页面</title>
+	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />	
+	
+</head>
+<body>
+
+	<div id="map" style="width:90%;height:600px;margin-top:30px;text-align:center;margin:0 auto;">
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+	
+	<script type="text/javascript">
+		window.onload=function () {
+			var map = L.map('map').setView([22.56414255434805,114.153442382813], 11);
+			L.tileLayer('./img/788865972/{z}/{x}/{y}.png'
+				, {
+					minZoom: 10,
+					maxZoom: 12,
+					attribution: '<b style="color:#dddddd">百度地图</b>'
+				})
+			.addTo(map);
+			
+		};	
+	</script>
+	
+</body>
+</html>
