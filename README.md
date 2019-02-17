@@ -14,3 +14,6 @@
 
 1. file-taken-datetime: get the a file actually recorded date (also support **image** and **video**)
 
+1. modbus crc 16
+
+
