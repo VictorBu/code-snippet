@@ -16,4 +16,5 @@
 
 1. modbus crc 16
 
+1. hj212 crc 16
 
