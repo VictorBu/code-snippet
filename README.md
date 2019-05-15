@@ -8,6 +8,7 @@
 ## Java
 
 1. hlsdownloader: hls (.m3u8) downloader
+1. spring boot + redis demo
 
 
 ## C#
