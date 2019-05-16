@@ -1,0 +1,20 @@
+spring:
+  cache:
+    type: redis # 设置使用 redis 作为缓存 (此行可以不配置)
+    redis:
+      time-to-live: 300s
+#      key-prefix: key # 不要配置该项
+#      use-key-prefix: true # 不要配置该项
+
+  redis:
+    host: 192.168.30.101
+    port: 6379
+    database: 0
+#    password: ******
+    jedis:
+      pool:
+        max-active: 10
+        min-idle: 0
+        max-idle: 6
+        max-wait: -1
+
