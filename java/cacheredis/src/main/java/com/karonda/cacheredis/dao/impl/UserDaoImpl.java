@@ -4,6 +4,9 @@ import com.karonda.cacheredis.dao.UserDao;
 import com.karonda.cacheredis.entity.User;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // 模拟数据库操作
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -35,6 +38,17 @@ public class UserDaoImpl implements UserDao {
         }
 
         return null;
+    }
+
+    @Override
+    public List<User> getAll() {
+
+        System.out.println("调用 dao 层 getAll");
+
+        List<User> userList = new ArrayList<>();
+        userList.add(user1);
+        userList.add(user2);
+        return userList;
     }
 
     @Override

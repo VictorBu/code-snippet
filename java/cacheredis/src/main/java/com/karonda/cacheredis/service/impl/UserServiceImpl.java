@@ -10,6 +10,8 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 //@CacheConfig(cacheNames = "user") // 如果使用该注解, 方法中则可以省略 cacheNames 配置
 public class UserServiceImpl implements UserService {
@@ -25,6 +27,12 @@ public class UserServiceImpl implements UserService {
     @Cacheable(cacheNames = "user", key = "#id")
     public User get(int id) {
         return userDao.get(id);
+    }
+
+    @Override
+    @Cacheable(cacheNames = "user", key = "#root.methodName")
+    public List<User> getAll() {
+        return userDao.getAll();
     }
 
     @Override

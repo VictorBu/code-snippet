@@ -5,6 +5,8 @@ import com.karonda.cacheredis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -16,6 +18,12 @@ public class UserController {
     public User get(@PathVariable int id){
 
         return userService.get(id);
+    }
+
+    @GetMapping("")
+    public List<User> getAll(){
+
+        return userService.getAll();
     }
 
     @PutMapping("")
