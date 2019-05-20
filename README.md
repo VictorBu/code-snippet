@@ -10,6 +10,7 @@
 1. hlsdownloader: hls (.m3u8) downloader
 1. spring boot + redis demo
 1. spring boot cache + redis
+1. idea multi module project
 
 
 ## C#
