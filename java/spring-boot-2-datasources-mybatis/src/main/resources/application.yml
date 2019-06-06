@@ -1,0 +1,18 @@
+app:
+  datasource:
+
+    first:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1/product?useSSL=false
+      username: root
+      password: root
+      configuration:
+        maximum-pool-size: 10
+
+    second:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1/stock?useSSL=false
+      username: root
+      password: root
+      configuration:
+        maximum-pool-size: 10

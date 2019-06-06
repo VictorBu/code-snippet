@@ -12,6 +12,7 @@
 1. spring boot cache + redis
 1. idea multi module project
 1. spring boot 2 multi datasources use jpa
+1. spring boot 2 multi datasources use mybatis
 
 
 ## C#
