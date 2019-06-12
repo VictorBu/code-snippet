@@ -15,6 +15,7 @@
 1. spring boot 2 multi datasources use mybatis
 1. spring cloud
     1. Eureka
+    1. Ribbon
 
 
 ## C#
