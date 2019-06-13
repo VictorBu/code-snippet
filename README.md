@@ -17,6 +17,7 @@
     1. Eureka
     1. Ribbon
     1. Feign
+    1. Hystrix & Hystrix Dashboard & Turbine
 
 
 ## C#
