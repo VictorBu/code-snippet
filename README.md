@@ -18,6 +18,7 @@
     1. Ribbon
     1. Feign
     1. Hystrix & Hystrix Dashboard & Turbine
+    1. Zuul
 
 
 ## C#
