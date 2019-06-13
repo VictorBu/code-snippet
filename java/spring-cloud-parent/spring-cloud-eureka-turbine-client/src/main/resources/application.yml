@@ -1,0 +1,17 @@
+server:
+  port: 8041
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+
+spring:
+  application:
+    name: turbine-client
+turbine:
+  aggregator:
+    cluster-config: default
+  app-config: ribbon-client, feign-client
+  cluster-name-expression: new String("default")
