@@ -10,3 +10,9 @@ eureka:
 spring:
   application:
     name: ribbon-client
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
