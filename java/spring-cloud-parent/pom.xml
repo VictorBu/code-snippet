@@ -10,6 +10,7 @@
         <module>spring-cloud-eureka-feign-client</module>
         <module>spring-cloud-eureka-turbine-client</module>
         <module>spring-cloud-eureka-zuul-client</module>
+        <module>spring-cloud-config-server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
