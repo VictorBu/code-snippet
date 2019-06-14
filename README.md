@@ -19,6 +19,7 @@
     1. Feign
     1. Hystrix & Hystrix Dashboard & Turbine
     1. Zuul
+    1. Spring Cloud Config
 
 
 ## C#

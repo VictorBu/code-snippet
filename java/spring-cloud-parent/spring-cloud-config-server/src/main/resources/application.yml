@@ -5,11 +5,17 @@ spring:
   application:
     name: config-server
 
-  profiles:
-    active: native # 从本地读取配置
+#  profiles:
+#    active: native # 从本地读取配置
 
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/shared # 本地配置路径
+#        native:
+#          search-locations: classpath:/shared # 本地配置路径
+        git:
+          uri: https://github.com/VictorBu/spring-cloud-config-demo
+          search-paths: repo # 搜索的文件夹地址
+#          username: # 如果是私有仓库须配置
+#          password: # 如果是私有仓库须配置
+      label: master # git 仓库分支名
