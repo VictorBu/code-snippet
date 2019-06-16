@@ -16,3 +16,12 @@ spring:
   sleuth:
     sampler:
       probability: 1.0 # 以 100% 的概率将链路的数据上传给 Zipkin Server
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
