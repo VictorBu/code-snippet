@@ -22,6 +22,7 @@
     1. Spring Cloud Config
     1. Spring Cloud Sleuth, Zipkin
     1. Spring Boot Admin
+    1. Spring Security, OAuth2
 
 
 ## C#
