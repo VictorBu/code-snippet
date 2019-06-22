@@ -12,6 +12,7 @@
         <module>spring-cloud-eureka-zuul-client</module>
         <module>spring-cloud-config-server</module>
         <module>spring-boot-admin-server</module>
+        <module>spring-security-oauth2-server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
