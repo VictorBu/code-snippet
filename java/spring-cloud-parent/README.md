@@ -9,4 +9,5 @@
 1. [Spring Cloud 学习 (七) Spring Cloud Sleuth](https://www.cnblogs.com/victorbu/p/11026717.html)
 1. [Spring Cloud 学习 (八) Spring Boot Admin](https://www.cnblogs.com/victorbu/p/11031166.html)
 1. [Spring Cloud 学习 (九) Spring Security, OAuth2](https://www.cnblogs.com/victorbu/p/11068224.html)
+1. [Spring Cloud 学习 (十) Spring Security, OAuth2, JWT](https://www.cnblogs.com/victorbu/p/11072782.html)
 

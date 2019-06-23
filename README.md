@@ -23,6 +23,7 @@
     1. Spring Cloud Sleuth, Zipkin
     1. Spring Boot Admin
     1. Spring Security, OAuth2
+    1. Spring Security, OAuth2, JWT
 
 
 ## C#

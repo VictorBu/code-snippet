@@ -1,5 +1,6 @@
 package com.karonda.controller;
 
+import com.karonda.dto.UserLoginDTO;
 import com.karonda.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,5 +20,11 @@ public class UserController {
     public User createUser(@RequestParam("username") String username
             , @RequestParam("password") String password){
         return userService.create(username, password);
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public UserLoginDTO login(@RequestParam("username") String username
+            , @RequestParam("password") String password){
+        return userService.login(username, password);
     }
 }

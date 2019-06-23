@@ -12,9 +12,9 @@ import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.security.oauth2.client.token.grant.client.ClientCredentialsResourceDetails;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
 
-@EnableOAuth2Client // 开启 OAuth2 Client
-@EnableConfigurationProperties
-@Configuration
+//@EnableOAuth2Client // 开启 OAuth2 Client
+//@EnableConfigurationProperties
+//@Configuration
 public class OAuth2ClientConfig {
 
     @Bean
