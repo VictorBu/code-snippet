@@ -5,8 +5,8 @@ eureka:
   instance:
     hostname: localhost
   client:
-    register-with-eureka: false # 默认情况下 Eureka Server 会向自己注册，设为 false 防止自己注册自己
-    fetch-registry: false # 默认情况下 Eureka Server 会向自己注册，设为 false 防止自己注册自己
+    register-with-eureka: false # 默认情况下 Eureka Server 会向自己注册，设为 false 不向自己注册自己
+    fetch-registry: false # 注册中心的职责就是维护服务实例，并不需要去检索服务，所以设置为 false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 

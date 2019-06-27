@@ -24,6 +24,7 @@
     1. Spring Boot Admin
     1. Spring Security, OAuth2
     1. Spring Security, OAuth2, JWT
+1. sequential uuid
 
 
 ## C#
