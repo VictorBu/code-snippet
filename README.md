@@ -25,6 +25,7 @@
     1. Spring Security, OAuth2
     1. Spring Security, OAuth2, JWT
 1. sequential uuid
+1. twitter snowflake
 
 
 ## C#
