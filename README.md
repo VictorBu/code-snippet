@@ -24,8 +24,10 @@
     1. Spring Boot Admin
     1. Spring Security, OAuth2
     1. Spring Security, OAuth2, JWT
+1. spring boot 2 + swagger 2
 1. sequential uuid
 1. twitter snowflake
+1. zuul + swagger 2
 
 
 ## C#
