@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: hello
+
+  rabbitmq:
+    host: 192.168.30.101
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: my_vhost
+
+logging:
+  level:
+    com: INFO
