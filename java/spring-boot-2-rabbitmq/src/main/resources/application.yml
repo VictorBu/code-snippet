@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: direct
+    active: topic
 
   rabbitmq:
     host: 192.168.30.101
