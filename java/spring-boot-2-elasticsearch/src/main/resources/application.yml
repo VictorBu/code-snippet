@@ -5,7 +5,7 @@ spring:
       cluster-nodes: 192.168.30.101:9300
 
   profiles:
-    active: ElasticsearchRepository
+    active: ElasticsearchTemplate
 
 swagger:
   enable: true
