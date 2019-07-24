@@ -4,5 +4,8 @@ spring:
       cluster-name: docker-cluster
       cluster-nodes: 192.168.30.101:9300
 
+  profiles:
+    active: ElasticsearchRepository
+
 swagger:
   enable: true
