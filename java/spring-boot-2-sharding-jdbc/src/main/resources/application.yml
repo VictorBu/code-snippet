@@ -1,0 +1,49 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapping/*.xml
+
+sharding:
+  jdbc:
+    datasource:
+      names: db-master-1,db-slave-1,db-slave-2
+
+      db-master-1:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.30.101:3306/test
+        username: root
+        password: root
+        maxPoolSize: 20
+
+      db-slave-1:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.30.102:3306/test
+        username: root
+        password: root
+        maxPoolSize: 20
+
+      db-slave-2:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.30.103:3306/test
+        username: root
+        password: root
+        maxPoolSize: 20
+
+    config:
+      masterslave:
+        load-balance-algorithm-type: round_robin # random 随机, round_robin 轮询
+        name: db1s2
+        master-data-source-name: db-master-1
+        slave-data-source-names: db-slave-1,db-slave-2
+
+    props:
+      sql:
+        show: true

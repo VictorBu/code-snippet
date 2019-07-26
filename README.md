@@ -30,6 +30,7 @@
 1. zuul + swagger 2
 1. spring boot 2 + rabbitmq
 1. spring boot 2 + elasticsearch
+1. spring boot 2 + sharding-jdbc
 
 
 ## C#
