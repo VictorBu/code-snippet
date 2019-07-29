@@ -31,6 +31,7 @@
 1. spring boot 2 + rabbitmq
 1. spring boot 2 + elasticsearch
 1. spring boot 2 + sharding-jdbc
+1. spring boot 2 + mongodb
 
 
 ## C#
