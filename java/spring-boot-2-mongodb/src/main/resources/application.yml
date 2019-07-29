@@ -3,5 +3,8 @@ spring:
     mongodb:
       uri: mongodb://test:123456@192.168.30.101:27017/test
 
+  profiles:
+    active: MongoRepository
+
 swagger:
   enable: true
