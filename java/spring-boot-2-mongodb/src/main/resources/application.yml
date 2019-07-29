@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://test:123456@192.168.30.101:27017/test
+
+swagger:
+  enable: true
