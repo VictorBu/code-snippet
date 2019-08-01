@@ -42,3 +42,7 @@
 
 1. hj212 crc 16
 
+## Architecture
+
+1. dynamic schema
+
