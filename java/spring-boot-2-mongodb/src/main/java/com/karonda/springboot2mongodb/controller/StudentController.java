@@ -12,6 +12,8 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.aggregation.AggregationResults;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
@@ -127,6 +129,52 @@ public class StudentController {
         }
 
         return majorConfig;
+    }
+
+    @RequestMapping(value = "/avg", method = RequestMethod.PUT)
+    @ApiOperation(value="根据专业计算各科平均分")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "major", value = "专业", paramType = "query", required = true),
+    })
+    public Object avg(String major){
+
+        Aggregation aggregation = Aggregation.newAggregation(
+                Aggregation.unwind("courseList"),
+                Aggregation.match(Criteria.where("major").is(major)),
+                Aggregation.group("courseList.name").avg("courseList.score").as("avg")
+        ); // avg 可以替换成 sum, max, min 分别求各科总分、最高分、最低分
+
+        AggregationResults<BasicDBObject> aggregationResults = mongoTemplate.aggregate(aggregation, Student.class, BasicDBObject.class);
+
+        List<BasicDBObject> result = new ArrayList<>();
+        for(Iterator<BasicDBObject> iterator = aggregationResults.iterator(); iterator.hasNext();){
+            result.add(iterator.next());
+        }
+
+        return result;
+    }
+
+    @RequestMapping(value = "/sum", method = RequestMethod.PUT)
+    @ApiOperation(value="个人总分")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "name", value = "姓名", paramType = "query", required = true),
+    })
+    public Object sum(String name){
+
+        Aggregation aggregation = Aggregation.newAggregation(
+                Aggregation.unwind("courseList"),
+                Aggregation.match(Criteria.where("name").is(name)),
+                Aggregation.group("name").sum("courseList.score").as("sum")
+        );
+
+        AggregationResults<BasicDBObject> aggregationResults = mongoTemplate.aggregate(aggregation, Student.class, BasicDBObject.class);
+
+        List<BasicDBObject> result = new ArrayList<>();
+        for(Iterator<BasicDBObject> iterator = aggregationResults.iterator(); iterator.hasNext();){
+            result.add(iterator.next());
+        }
+
+        return result;
     }
 
 
