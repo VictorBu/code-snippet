@@ -131,7 +131,26 @@ public class StudentController {
         return majorConfig;
     }
 
-    @RequestMapping(value = "/avg", method = RequestMethod.PUT)
+    @RequestMapping(value = "/update", method = RequestMethod.GET)
+    @ApiOperation(value="修改某学生的某课程分数")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "name", value = "姓名", paramType = "query", required = true),
+            @ApiImplicitParam(name = "courseName", value = "课程", paramType = "query", required = true),
+            @ApiImplicitParam(name = "score", value = "分数", paramType = "query", required = true),
+    })
+    public Object update(String name, String courseName, Float score){
+
+        Query query = Query.query(Criteria.where("name").is(name).and("courseList.name").is(courseName));
+
+        Update update = new Update();
+        update.set("courseList.$.score", score);
+
+        mongoTemplate.updateFirst(query, update, Student.class);
+
+        return null;
+    }
+
+    @RequestMapping(value = "/avg", method = RequestMethod.GET)
     @ApiOperation(value="根据专业计算各科平均分")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "major", value = "专业", paramType = "query", required = true),
@@ -154,7 +173,7 @@ public class StudentController {
         return result;
     }
 
-    @RequestMapping(value = "/sum", method = RequestMethod.PUT)
+    @RequestMapping(value = "/sum", method = RequestMethod.GET)
     @ApiOperation(value="个人总分")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "name", value = "姓名", paramType = "query", required = true),
