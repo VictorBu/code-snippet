@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://test:123456@192.168.30.101:27017/test
+      uri: mongodb://test:123456@192.168.30.102:20000,192.168.30.103:20000,192.168.30.104:20000/test
 
   profiles:
     active: MongoTemplate
