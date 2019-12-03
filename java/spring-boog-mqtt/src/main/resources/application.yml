@@ -1,0 +1,17 @@
+spring:
+  mqtt:
+    client:
+      username: 用户名
+      password: 密码
+      serverURIs: tcp://ip:port # 客户端地址，多个使用都好隔开
+      clientId: client0001 # ${random.value}
+      keepAliveInterval: 30
+      connectionTimeout: 30
+    producer:
+      defaultQos: 1
+      defaultRetained: true
+      defaultTopic: defaultTopicName
+    consumer:
+      defaultQos: 1
+      completionTimeout: 30
+      consumerTopics: topic1,topic2 # 监听的 topic，多个使用逗号隔开
