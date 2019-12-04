@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>WebSocket 客户端</title>
+	</head>
+	<body>
+	
+		<script type="text/javascript">
+		
+			var socket;
+			
+			function connect(){
+				var userId = document.getElementById('userId').value;
+				if(window.WebSocket){
+					// 参数就是与服务器连接的地址
+					// socket = new WebSocket('ws://localhost:8081/ws');
+					socket = new WebSocket('ws://localhost:8081/ws?userId=' + userId);
+					
+					
+					// 客户端收到服务器消息的时候就会执行这个回调方法
+					socket.onmessage = function (event) {
+						var response = document.getElementById('response');
+						response.innerHTML = response.innerHTML 
+							+ '<p style="color:LimeGreen;"> 接收：' + event.data + '</p>';
+					}
+
+					// 连接建立的回调函数
+					socket.onopen = function(event){
+						var status = document.getElementById('status');
+						status.innerHTML = '<p style="color:YellowGreen;">WebSocket 连接开启</p>';
+					}
+
+					// 连接断掉的回调函数
+					socket.onclose = function (event) {
+						var status = document.getElementById('status');
+						status.innerHTML = '<p style="color:Red;">WebSocket 连接关闭</p>';
+					}
+				}else{
+					var status = document.getElementById('status');
+					status.innerHTML = '<p style="color:Red;">浏览器不支持 WebSocket</p>';
+				}
+			}
+
+			// 发送数据
+			function send(message){
+				if(!window.WebSocket){
+					return;
+				}
+				
+				var ta = document.getElementById('response');
+				ta.innerHTML = ta.innerHTML + '<p style="color:SkyBlue;"> 发送：' + message + '</p>';
+
+				// 当websocket状态打开
+				if(socket.readyState == WebSocket.OPEN){
+					socket.send(message);
+				}else{
+					var response = document.getElementById("response");
+					response.innerHTML = '<p style="color:Red;">连接没有开启</p>';
+				}
+			}
+		</script>
+		
+		<form onsubmit="return false">
+			<label for="userId">用户ID:</label>
+			<input type="text" name="userId" id="userId" />
+			<input type ="button" value="连接服务器" onclick="connect();">
+		</form>
+		
+		<div id ="status"></div>
+		
+		<form onsubmit="return false">
+			<input name = "message" style="width: 200px;"></input>
+			<input type ="button" value="发送消息" onclick="send(this.form.message.value);">
+		</form>
+		
+		<div id ="response"></div>
+		
+		<input type="button" onclick="javascript:document.getElementById('response').innerHTML=''" value="清空消息">
+	</body>
+</html>
