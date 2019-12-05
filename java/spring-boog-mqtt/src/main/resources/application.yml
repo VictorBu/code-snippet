@@ -1,9 +1,9 @@
 spring:
   mqtt:
     client:
-      username: ÓÃ»§Ãû
-      password: ÃÜÂë
-      serverURIs: tcp://ip:port # ¿Í»§¶ËµØÖ·£¬¶à¸öÊ¹ÓÃ¶¼ºÃ¸ô¿ª
+      username: ç”¨æˆ·å
+      password: å¯†ç 
+      serverURIs: tcp://ip:port # å®¢æˆ·ç«¯åœ°å€ï¼Œå¤šä¸ªä½¿ç”¨é€—å·éš”å¼€
       clientId: client0001 # ${random.value}
       keepAliveInterval: 30
       connectionTimeout: 30
@@ -13,5 +13,5 @@ spring:
       defaultTopic: defaultTopicName
     consumer:
       defaultQos: 1
-      completionTimeout: 30
-      consumerTopics: topic1,topic2 # ¼àÌıµÄ topic£¬¶à¸öÊ¹ÓÃ¶ººÅ¸ô¿ª
+      completionTimeout: 30000
+      consumerTopics: topic1,topic2 # ç›‘å¬çš„ topicï¼Œå¤šä¸ªä½¿ç”¨é€—å·éš”å¼€
