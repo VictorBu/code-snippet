@@ -1,0 +1,3 @@
+server:
+  socket-ip: 127.0.0.1
+  socket-port: 8081
