@@ -1,0 +1,12 @@
+spring:
+  kafka:
+    one:
+      bootstrap-servers: IP:PORT
+      consumer:
+        group-id: YOUR_GROUP_ID
+        enable-auto-commit: true
+    two:
+      bootstrap-servers: IP:PORT
+      consumer:
+        group-id: YOUR_GROUP_ID
+        enable-auto-commit: true

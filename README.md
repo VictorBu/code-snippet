@@ -35,6 +35,7 @@
 1. spring boot 2 + mqtt
 1. netty + websocket
 1. netty heartbeat
+1. spring boot 2 + kafka (multi)
 
 
 ## C#
