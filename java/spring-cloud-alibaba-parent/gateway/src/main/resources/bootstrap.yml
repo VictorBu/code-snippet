@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.92.1:8848
+        namespace: e5fc372c-ad66-4e0e-a353-a217d0a315ba
+    gateway:
+      routes:
+        - id: service1
+          uri: lb://service1 # lb 代表注册中心的服务
+          predicates:
+            - Path=/service1/** # 匹配的 URL
+          filters:
+            - StripPrefix=1 # URL 去掉的前缀个数
+
+server:
+  port: 8081
+
+
+

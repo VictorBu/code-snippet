@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: service2
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.92.1:8848
+        namespace: e5fc372c-ad66-4e0e-a353-a217d0a315ba
+#      config:
+#        server-addr: 192.168.92.1:8848
+#        namespace: e5fc372c-ad66-4e0e-a353-a217d0a315ba
+#        group: service2
+#        file-extension: yml
+server:
+  port: 8079

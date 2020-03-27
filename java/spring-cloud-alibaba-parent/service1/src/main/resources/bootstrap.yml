@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: service1
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.92.1:8848
+        namespace: e5fc372c-ad66-4e0e-a353-a217d0a315ba
+#      config:
+#        server-addr: 192.168.92.1:8848
+#        namespace: e5fc372c-ad66-4e0e-a353-a217d0a315ba
+#        group: service1
+#        file-extension: yml
+#        extension-configs:
+#          - data-id: greeting.yml
+#            group: common
+#            refresh: true
+#          - data-id: author.yml
+#            group: common
+#            refresh: true
+
+server:
+  port: 8071
