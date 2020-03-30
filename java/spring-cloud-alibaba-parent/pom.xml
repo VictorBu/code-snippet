@@ -19,6 +19,8 @@
         <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
         <nacos.version>2.2.0.RELEASE</nacos.version>
         <spring-cloud-dubbo.version>2.2.0.RELEASE</spring-cloud-dubbo.version>
+        <spring-cloud-sentinel.version>2.2.0.RELEASE</spring-cloud-sentinel.version>
+
         <dubbo-service.version>0.0.1-SNAPSHOT</dubbo-service.version>
     </properties>
 
@@ -68,6 +70,13 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-dubbo</artifactId>
                 <version>${spring-cloud-dubbo.version}</version>
+                <type>pom</type>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+                <version>${spring-cloud-sentinel.version}</version>
                 <type>pom</type>
             </dependency>
 

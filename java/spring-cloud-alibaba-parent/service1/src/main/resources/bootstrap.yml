@@ -20,6 +20,10 @@ spring:
 #            group: common
 #            refresh: true
 
+    sentinel:
+      transport:
+        dashboard: localhost:8089
+
 dubbo:
   scan:
     base-packages: com.karonda.service1.service.impl

@@ -41,6 +41,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
             <groupId>com.karonda</groupId>
             <artifactId>dubbo-service</artifactId>
         </dependency>
