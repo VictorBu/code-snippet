@@ -1,6 +1,8 @@
 package com.karonda.service1.controller;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.karonda.dubboservice.GreetingService;
+import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,11 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingController {
 
-    @Value("${server.port:0}")
-    private Integer port;
+//    @Reference
+    @Autowired
+    private GreetingService greetingService;
 
     @RequestMapping("/greeting")
     public String greeting() {
-        return "hello from port: " + port;
+        return greetingService.greeting();
     }
 }

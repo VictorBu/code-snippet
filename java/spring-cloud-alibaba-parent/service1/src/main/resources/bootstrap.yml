@@ -20,5 +20,14 @@ spring:
 #            group: common
 #            refresh: true
 
+dubbo:
+  scan:
+    base-packages: com.karonda.service1.service.impl
+  protocol:
+    name: dubbo
+    port: -1 # -1 表示端口自增
+  registry:
+    address: nacos://192.168.92.1:8848
+
 server:
   port: 8071

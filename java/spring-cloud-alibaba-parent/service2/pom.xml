@@ -33,6 +33,17 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
             <type>pom.sha256</type>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-dubbo</artifactId>
+            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.karonda</groupId>
+            <artifactId>dubbo-service</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

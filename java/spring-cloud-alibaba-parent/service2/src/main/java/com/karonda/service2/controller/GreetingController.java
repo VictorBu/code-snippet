@@ -1,5 +1,7 @@
 package com.karonda.service2.controller;
 
+import com.karonda.dubboservice.GreetingService;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -22,5 +24,13 @@ public class GreetingController {
     @RequestMapping("/greeting")
     public String greeting() {
         return restTemplate.getForObject("http://service1/greeting", String.class);
+    }
+
+    @Reference
+    private GreetingService greetingService;
+
+    @RequestMapping("/dubboGreeting")
+    public String dubboGreeting() {
+        return greetingService.greeting();
     }
 }

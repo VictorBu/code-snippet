@@ -12,5 +12,15 @@ spring:
 #        namespace: e5fc372c-ad66-4e0e-a353-a217d0a315ba
 #        group: service2
 #        file-extension: yml
+
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://192.168.92.1:8848
+  consumer:
+    check: false # 不加此配置项目启动时可能会失败
+
 server:
   port: 8079
