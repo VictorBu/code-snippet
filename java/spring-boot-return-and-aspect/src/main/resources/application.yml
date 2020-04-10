@@ -1,0 +1,9 @@
+swagger:
+  enable: true
+  base-package: com.karonda.springbootreturnandaspect.controller
+  title: TITLE
+  description: DESCRIPTION
+  terms-of-service-url: https://www.cnblogs.com/victorbu
+  version: @project.version@
+server:
+  port: 8088
