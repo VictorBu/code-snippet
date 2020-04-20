@@ -28,6 +28,7 @@
 	1. Dubbo
 	1. Spring Cloud Gateway
 	1. Sentinel
+	1. Seata
 1. spring boot 2 + swagger 2
 1. sequential uuid
 1. twitter snowflake
