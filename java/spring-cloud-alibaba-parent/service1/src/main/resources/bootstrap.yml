@@ -24,6 +24,9 @@ spring:
 #      transport:
 #        dashboard: localhost:8089
 
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
 
 dubbo:
   scan:
