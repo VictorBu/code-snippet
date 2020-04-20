@@ -13,6 +13,10 @@ spring:
 #        group: service2
 #        file-extension: yml
 
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+
 dubbo:
   scan:
     base-packages: com.karonda.service2.service.impl
