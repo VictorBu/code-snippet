@@ -14,6 +14,12 @@ spring:
             - Path=/service1/** # 匹配的 URL
           filters:
             - StripPrefix=1 # URL 去掉的前缀个数
+        - id: service2
+          uri: lb://service2
+          predicates:
+            - Path=/service2/**
+          filters:
+            - StripPrefix=1
 
 server:
   port: 8081

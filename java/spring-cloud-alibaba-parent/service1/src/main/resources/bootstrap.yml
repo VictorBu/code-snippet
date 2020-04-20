@@ -20,9 +20,10 @@ spring:
 #            group: common
 #            refresh: true
 
-    sentinel:
-      transport:
-        dashboard: localhost:8089
+#    sentinel:
+#      transport:
+#        dashboard: localhost:8089
+
 
 dubbo:
   scan:
@@ -32,6 +33,8 @@ dubbo:
     port: -1 # -1 表示端口自增
   registry:
     address: nacos://192.168.92.1:8848
+  consumer:
+    check: false # 不加此配置项目启动时可能会失败
 
 server:
   port: 8071
