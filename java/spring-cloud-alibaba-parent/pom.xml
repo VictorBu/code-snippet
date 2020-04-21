@@ -12,6 +12,7 @@
     <modules>
         <module>service1</module>
         <module>service2</module>
+        <module>gateway</module>
         <module>dubbo-service</module>
     </modules>
     <groupId>com.karonda</groupId>
@@ -26,6 +27,7 @@
         <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
         <mysql-connector.version>8.0.19</mysql-connector.version>
         <mybatis.version>2.1.2</mybatis.version>
+        <mybatis-plus.version>3.3.1</mybatis-plus.version>
 
         <dubbo-service.version>0.0.1-SNAPSHOT</dubbo-service.version>
     </properties>
@@ -77,6 +79,18 @@
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
 
             <dependency>

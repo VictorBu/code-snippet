@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.karonda.service2.mapper.OrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.karonda.model.Order">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="user_id" jdbcType="VARCHAR" property="userId" />
+        <result column="commodity_code" jdbcType="VARCHAR" property="commodityCode" />
+        <result column="count" jdbcType="INTEGER" property="count" />
+        <result column="money" jdbcType="INTEGER" property="money" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, user_id, commodity_code, count, money
+    </sql>
+
+    <select id="pageList" parameterType="com.karonda.service2.page.OrderPage" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from order_tbl
+        <where>
+            <if test="commodityCode != null">
+                commodity_code = #{commodityCode}
+            </if>
+        </where>
+    </select>
+
+</mapper>

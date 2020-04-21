@@ -5,5 +5,6 @@ spring:
     username: root
     password: root
 #    type: com.alibaba.druid.pool.DruidDataSource
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
+
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
