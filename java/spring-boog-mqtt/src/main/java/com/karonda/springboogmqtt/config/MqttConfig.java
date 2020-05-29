@@ -81,7 +81,7 @@ public class MqttConfig {
     @Bean
     @ServiceActivator(inputChannel = OUTBOUND_CHANNEL)
     public MessageHandler getMqttProducer() {
-        MqttPahoMessageHandler messageHandler = new MqttPahoMessageHandler(clientId, getMqttClientFactory());
+        MqttPahoMessageHandler messageHandler = new MqttPahoMessageHandler(clientId + "_producer", getMqttClientFactory());
         messageHandler.setAsync(true);
         messageHandler.setDefaultTopic(defaultTopic);
         messageHandler.setDefaultRetained(defaultRetained);
@@ -100,7 +100,7 @@ public class MqttConfig {
     @Bean
     public MessageProducer getMqttConsumer() {
         MqttPahoMessageDrivenChannelAdapter adapter =
-                new MqttPahoMessageDrivenChannelAdapter(clientId, getMqttClientFactory(), consumerTopics);
+                new MqttPahoMessageDrivenChannelAdapter(clientId + "_consumer", getMqttClientFactory(), consumerTopics);
         adapter.setCompletionTimeout(completionTimeout);
         adapter.setConverter(new DefaultPahoMessageConverter());
         adapter.setQos(defaultConsumerQos);
