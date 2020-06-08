@@ -44,6 +44,7 @@
 1. spring boot + xxl-job
 1. jjwt
 1. read binlog
+1. canal
 
 ## C#
 
