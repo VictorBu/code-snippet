@@ -1,0 +1,4 @@
+shell:
+  directory: /project/watchdog
+  startupFileName: startup.sh
+  restartFileName: restart.sh

@@ -45,6 +45,7 @@
 1. jjwt
 1. read binlog
 1. canal
+1. watchdog
 
 ## C#
 
