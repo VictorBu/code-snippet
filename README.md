@@ -46,6 +46,7 @@
 1. read binlog
 1. canal
 1. watchdog
+1. MinIO
 
 ## C#
 

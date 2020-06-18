@@ -1,0 +1,10 @@
+minio:
+  url: http://192.168.137.101:9000
+  accessKey: minioadmin
+  secretKey: minioadmin
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
