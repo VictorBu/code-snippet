@@ -47,6 +47,7 @@
 1. canal
 1. watchdog
 1. MinIO
+1. Spring Security + JJWT
 
 ## C#
 
