@@ -48,6 +48,7 @@
 1. watchdog
 1. MinIO
 1. Spring Security + JJWT
+1. Paho
 
 ## C#
 

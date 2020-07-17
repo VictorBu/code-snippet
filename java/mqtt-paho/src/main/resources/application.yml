@@ -1,0 +1,14 @@
+mqtt:
+  client:
+    username: admin
+    password: public
+    serverURI: tcp://192.168.137.101:1883
+    clientId: paho_${random.int[1000,9999]}
+    keepAliveInterval: 120
+    connectionTimeout: 30
+  producer:
+    defaultQos: 1
+    defaultRetained: true
+    defaultTopic: topic/test1
+  consumer:
+    consumerTopics: topic/test2,topic/test3
